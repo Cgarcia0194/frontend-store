@@ -114,31 +114,6 @@ h3 {
     gap: 2rem;
 }
 
-.grid-nosotros {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin: 0 auto;
-    max-width: 80rem;
-}
-
-.nosotros-text p {
-    color: var(--white);
-    font-size: 1.7rem;
-}
-
-.nosotros-img {
-    background-image: url(../img/nosotros.jpg);
-    background-size: cover;
-}
-
-.imgs{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 15rem;
-}
-
 .product {
     background-color: var(--dark-primary);
     padding: 1rem;
@@ -181,6 +156,44 @@ h3 {
     grid-row: 8/9;
 }
 
+
+/* NOSOTROS */
+.grid-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.imgs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.imgs__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.imgs__block img {
+    width: 80%;
+}
+
+.imgs__block h3 {
+    margin: 0;
+}
+
+.imgs__block p {
+    text-align: center;
+}
+
+.nosotros__text p {
+    color: var(--white);
+    font-size: 1.7rem;
+}
+
 @media (max-width: 599px) {
     html {
         font-size: 50%;
@@ -192,6 +205,15 @@ h3 {
 
     .grid-nosotros {
         grid-template-columns: 1fr;
+    }
+
+    .nosotros__img {
+        grid-row: 1 / 2;
+        width: 100%;
+    }
+
+    .imgs {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
